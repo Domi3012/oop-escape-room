@@ -11,14 +11,13 @@ class Question {
 private:
     std::string questionText;
     std::string currentAnswer;
-    int questionID;
     int keyStartIndex;
     int keyLength;
     int targetStartIndex;
 
     std::string toLowerStr(std::string str);
 public:
-    Question(std::string qt, int id, int start, int end, int tstart);
+    Question(std::string qt, int start, int len, int tstart);
     void displayQuestion();
     void setAnswer(std::string ansText);
     std::string getKeyFromAnswer();

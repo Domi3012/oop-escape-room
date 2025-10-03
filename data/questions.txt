@@ -1,0 +1,4 @@
+Trong khoa học máy tính, cấu trúc dữ liệu cơ bản nào tuân thủ theo quy luật LIFO (Last in - First out)|2 1 0
+Mặc định, môi trường phát triển trên máy ảo của Github Codespaces sử dụng distribution nào của hệ điều hành Linux?|3 1 1
+Đáp án của câu hỏi này chính là tổng x + y + z, với x, y và z là các số tự nhiên làm cho 3 phát biểu sau đúng: (i) "Lập trình hướng đối tượng có x quy tắc cơ bản”; (ii) "Kiểu 'int' trong C++ lưu được các giá trị nguyên có giá trị từ -2,147,483,648 đến 2,147,483,647. Một biến kiểu 'int' được lưu trữ chiếm y byte trên bộ nhớ"; (iii) "Có z cách để chọn lấy 3 bông hoa từ một lọ gồm 4 bông hoa phân biệt”|0 2 9
+

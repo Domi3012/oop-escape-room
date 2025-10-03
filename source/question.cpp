@@ -1,13 +1,11 @@
 #include "../include/question.h"
 
 void Question::displayQuestion() {
-    std::print(std::cout, "CÂU HỎI {0}\n", questionID);
     std::cout << questionText << '\n';
 }
 
-Question::Question(std::string qt, int id, int start, int len, int tstart) 
+Question::Question(std::string qt, int start, int len, int tstart) 
     : questionText(qt), 
-      questionID(id), 
       keyStartIndex(start), 
       keyLength(len), 
       targetStartIndex(tstart)

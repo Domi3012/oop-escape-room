@@ -23,3 +23,53 @@ void salute() {
     std::cin.get();
 }
 
+std::string loadEmailFromFile() {
+    std::ifstream inFile("../data/email.txt");
+    
+    if (!inFile.is_open()) {
+        std::cerr << "Lỗi: Không thể mở file dữ liệu email\n";
+        return ""; // Trả về string rỗng để báo hiệu thất bại
+    }
+
+    std::string line;
+    std::getline(inFile, line);
+
+    return line;
+}
+
+std::vector<Question> loadQuestionFromFile() {
+    std::ifstream inFile("../data/questions.txt");
+    std::vector<Question> questions;
+
+
+    if (!inFile.is_open()) {
+        std::cerr << "Lỗi: Không thể mở file dữ liệu câu hỏi\n";
+        return questions; // Trả về vector rỗng để báo hiệu thất bại
+    }
+
+    std::string line;
+    int lineCount = 0;
+
+    while (std::getline(inFile, line)) {
+        lineCount++;
+        
+        if (line.empty()) continue;
+
+        std::string text;
+        int startIndex, len, targetIndex;
+        std::stringstream ss(line);
+        if (
+            !std::getline(ss, text, '|') ||
+            !(ss >> startIndex) ||
+            !(ss >> len) ||
+            !(ss >> targetIndex)
+        ) {
+            std::cerr << "Load câu hỏi: Dòng " << lineCount << " không đúng định dạng. Bỏ qua." << std::endl;
+            continue;
+        }
+        
+        questions.push_back(Question(text, startIndex, len, targetIndex));
+    }
+
+    return questions;
+}
