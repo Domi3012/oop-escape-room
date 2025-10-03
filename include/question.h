@@ -14,18 +14,15 @@ private:
     int questionID;
     int keyStartIndex;
     int keyLength;
+    int targetStartIndex;
 
     std::string toLowerStr(std::string str);
 public:
-    Question(std::string qt, int id, int start, int end);
+    Question(std::string qt, int id, int start, int end, int tstart);
     void displayQuestion();
     void setAnswer(std::string ansText);
-    std::string getKeyFromAnswer() {
-        
-    }
+    std::string getKeyFromAnswer();
+    int getTargetStartIndex();
 };
-
-
-
 
 #endif

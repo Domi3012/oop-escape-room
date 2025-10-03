@@ -5,11 +5,12 @@ void Question::displayQuestion() {
     std::cout << questionText << '\n';
 }
 
-Question::Question(std::string qt, int id, int start, int len) 
+Question::Question(std::string qt, int id, int start, int len, int tstart) 
     : questionText(qt), 
       questionID(id), 
       keyStartIndex(start), 
-      keyLength(len) 
+      keyLength(len), 
+      targetStartIndex(tstart)
 {}
 
 std::string Question::toLowerStr(std::string str) {
@@ -22,3 +23,10 @@ void Question::setAnswer(std::string ansText) {
     currentAnswer = toLowerStr(ansText);
 }
 
+std::string Question::getKeyFromAnswer() {
+    return currentAnswer.substr(keyStartIndex, keyLength);
+}
+
+int Question::getTargetStartIndex() {
+    return targetStartIndex;
+}
