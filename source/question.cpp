@@ -28,3 +28,12 @@ std::string Question::getKeyFromAnswer() {
 int Question::getTargetStartIndex() {
     return targetStartIndex;
 }
+
+bool Question::isAnswered() {
+    return !(currentAnswer.empty());
+}
+
+std::string Question::getCurrentAnswer() {
+    return currentAnswer;
+}
+

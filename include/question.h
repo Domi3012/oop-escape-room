@@ -22,6 +22,8 @@ public:
     void setAnswer(std::string ansText);
     std::string getKeyFromAnswer();
     int getTargetStartIndex();
+    bool isAnswered();
+    std::string getCurrentAnswer();
 };
 
 #endif
