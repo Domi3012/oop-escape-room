@@ -19,6 +19,15 @@ void QuizManager::run() {
             continue;
         }
     }
+
+    std::string finalEmail = constructEmail();
+
+    clearConsole();
+    std::cout << "Chúc mừng các bạn đã hoàn thành thử thách, nếu muốn được hợp tác với mình, xin vui lòng gửi email tới:\n\n";
+    std::cout << finalEmail;
+    std::cout << "\n\nHãy nhấn phím enter để tiếp tục...";
+    std::cin.get();
+    std::cin.get();
 }
 
 int QuizManager::selectQuestionSession() {
@@ -48,7 +57,7 @@ int QuizManager::selectQuestionSession() {
                 // Số nhập vào nằm ngoài phạm vi cho phép
                 std::cout << "Lựa chọn không hợp lệ. Nhấn enter để quay lại màn hình lựa chọn.";
                 std::cin.get();
-                std::cin.get();
+                std::cin.get(); // minh khong hieu tai sao phai cin.get() 2 lan man hinh moi dung lai huhu
             }
         } else {
             std::cout << "Lựa chọn không hợp lệ. Nhấn enter để quay lại màn hình lựa chọn.";
@@ -73,4 +82,16 @@ void QuizManager::answerQuestionSession(int number) {
     getline(std::cin, ans);
 
     questionList[number - 1].setAnswer(ans);
+}
+
+std::string QuizManager::constructEmail() {
+    std::string finalEmail = email;
+    for (Question ques: questionList) {
+        std::string key = ques.getKeyFromAnswer();
+        int targetIndex = ques.getTargetStartIndex();
+        for (int i = 0; i < key.size(); i++) {
+            finalEmail[targetIndex + i] = key[i];
+        }
+    }
+    return finalEmail;
 }

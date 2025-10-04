@@ -21,7 +21,6 @@ void salute() {
     std::cout << "Cảm ơn các bạn đã tham gia thử thách của mình. Hi vọng các bạn đã có một trải nghiệm tốt và mong rằng các bạn đã tìm đúng email của mình!\n";
     std::cout << "\nChương trình đang thoát, hãy nhấn phím enter để tiếp tục...";
     std::cin.get();
-    std::cin.get();
 }
 
 std::string loadEmailFromFile() {

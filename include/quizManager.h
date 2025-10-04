@@ -12,6 +12,7 @@ private:
     std::string email;
     int selectQuestionSession();
     void answerQuestionSession(int number);
+    std::string constructEmail();
 public:
     QuizManager(std::vector<Question> ql, std::string e);
     void run();
