@@ -30,7 +30,7 @@ Theory exercise #1 for "Object-oriented Programming" course, class 24CTT1, semes
 
 ### Yêu cầu
 
--   Một trình biên dịch C++ hỗ trợ C++20 (do sử dụng `std::format`)
+-   Một trình biên dịch C++ hỗ trợ C++23 (do sử dụng `std::format`)
 
 ### Biên dịch
 
@@ -44,11 +44,11 @@ Theory exercise #1 for "Object-oriented Programming" course, class 24CTT1, semes
     ```
 3.  Biên dịch tất cả các file nguồn:
     ```bash
-    $ g++ -std=c++20 source/*.cpp -o build/app
+    $ g++ -std=c++23 source/*.cpp -o build/app
     ```
 4.  Chạy chương trình:
     ```bash
-    ./build/app
+    $ ./build/app
     ```
     **Lưu ý:** Hãy đảm bảo bạn chạy chương trình từ thư mục gốc của project để nó có thể tìm thấy thư mục `data`.
 
