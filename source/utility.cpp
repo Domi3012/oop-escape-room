@@ -2,9 +2,9 @@
 
 void clearConsole() {
 #if defined(_WIN32) || defined(WIN32)
-    system("cls"); // For Windows
+    system("cls"); // Windows
 #else
-    system("clear"); // For Unix-based systems
+    system("clear"); // Linux va MacOs
 #endif
 }
 

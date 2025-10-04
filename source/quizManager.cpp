@@ -22,6 +22,7 @@ void QuizManager::run() {
 
     std::string finalEmail = constructEmail();
 
+    // hien thi email cuoi cung
     clearConsole();
     std::cout << "Chúc mừng các bạn đã hoàn thành thử thách, nếu muốn được hợp tác với mình, xin vui lòng gửi email tới:\n\n";
     std::cout << finalEmail;
@@ -86,6 +87,7 @@ void QuizManager::answerQuestionSession(int number) {
     questionList[number - 1].setAnswer(ans);
 }
 
+// Ham xay dung email cuoi cung tu email placeholder va cac key tu cac question da duoc tra loi
 std::string QuizManager::constructEmail() {
     std::string finalEmail = email;
     for (Question ques: questionList) {
