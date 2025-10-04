@@ -52,11 +52,10 @@ Theory exercise #1 for "Object-oriented Programming" course, class 24CTT1, semes
     ```
     **Lưu ý:** Hãy đảm bảo bạn chạy chương trình từ thư mục gốc của project để nó có thể tìm thấy thư mục `data`.
 
-``
 
 ## Tái sử dụng chương trình bằng email và bộ câu hỏi khác.
 
-Nếu có nhu cầu datatái sử dụng chương trình, sử dụng chính email và bộ câu hỏi của các bạn, các bạn chỉ cần thay đổi các file sau trong folder /data
+Nếu có nhu cầu tái sử dụng chương trình, sử dụng chính email và bộ câu hỏi của các bạn, các bạn chỉ cần thay đổi các file sau trong folder /data
 
 ### `questions.txt`
 
