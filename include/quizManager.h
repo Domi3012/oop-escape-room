@@ -1,3 +1,11 @@
+/**
+ * @file quizManager.h
+ * @brief Định nghĩa lớp QuizManager, bộ não điều khiển toàn bộ luồng của thử thách.
+ *
+ * Lớp này quản lý vòng lặp chính của trò chơi, xử lý việc lựa chọn câu hỏi,
+ * nhận câu trả lời, và cuối cùng là xây dựng email kết quả.
+ */
+
 #ifndef QUIZMANAGER_H
 #define QUIZMANAGER_H
 

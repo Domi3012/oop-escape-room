@@ -22,7 +22,12 @@ void Question::setAnswer(std::string ansText) {
 }
 
 std::string Question::getKeyFromAnswer() {
-    return currentAnswer.substr(keyStartIndex, keyLength);
+    if (keyStartIndex < 0 || keyStartIndex >= currentAnswer.length()) {
+        return "";
+    }
+    size_t availableLength = currentAnswer.length() - keyStartIndex;
+    size_t lengthToTake = std::min((size_t)keyLength, availableLength);
+    return currentAnswer.substr(keyStartIndex, lengthToTake);
 }
 
 int Question::getTargetStartIndex() {
