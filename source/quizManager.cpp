@@ -56,8 +56,9 @@ int QuizManager::selectQuestionSession() {
             } else {
                 // Số nhập vào nằm ngoài phạm vi cho phép
                 std::cout << "Lựa chọn không hợp lệ. Nhấn enter để quay lại màn hình lựa chọn.";
+                std::cin.clear(); 
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 std::cin.get();
-                std::cin.get(); // minh khong hieu tai sao phai cin.get() 2 lan man hinh moi dung lai huhu
             }
         } else {
             std::cout << "Lựa chọn không hợp lệ. Nhấn enter để quay lại màn hình lựa chọn.";
@@ -72,13 +73,14 @@ int QuizManager::selectQuestionSession() {
 
 void QuizManager::answerQuestionSession(int number) {
     clearConsole();
+    std::cin.clear(); 
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //clear du lieu con lai trong std::cin
 
     std::print(std::cout, "CÂU HỎI {0}:\n", number);
     questionList[number - 1].displayQuestion();
 
     std::cout << "\nHãy nhập câu trả lời của bạn: ";
     std::string ans;
-    std::cin.ignore();
     getline(std::cin, ans);
 
     questionList[number - 1].setAnswer(ans);
